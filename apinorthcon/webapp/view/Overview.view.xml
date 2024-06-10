@@ -1,0 +1,61 @@
+<mvc:View controllerName="apinorthcon.controller.Overview"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title2}" showNavButton="true" navButtonPress=".onNavBack">
+        <content> 
+        <VBox id="_IDGenVBox1" >
+        <Text id="jhgfd" text="hi"></Text>
+        <Text id="_IDGenText1" text="{EmployeeDataModel>CustomerID}"></Text>
+        <Text id="_IDGenText2" text="{EmployeeDataModel>CompanyName}"></Text>
+        </VBox>
+         <!-- <Table id="table" items="{path: 'EmployeeDataModel>/' , parameters:{expand : 'Orders'}}" mode="MultiSelect">
+        <headerToolbar>
+						<OverflowToolbar id="otbSubheader">
+							<Title id="_IDGenTitle1" text="Products" level="H2"/>
+							<ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+							<Button id="editButton" text="Edit" type="Transparent"  />
+							<Button id="addButton" text="Add" type="Transparent" />
+							<Button id="deleteButton" text="Delete" type="Transparent"/>
+							<Button id="_IDGenButton11" icon="sap-icon://action-settings" />
+                            <Button id="_IDGenButton14" text="SK" type="Accept"></Button>
+						</OverflowToolbar>
+					</headerToolbar>
+        <columns>
+        <Column id="_IDGenColumn1" >
+            <Label id="_IDGenText1" text="ID"></Label>
+        </Column>
+        <Column id="_IDGenColumn2" >
+            <Label id="_IDGenText2" text="EMPID"></Label>
+        </Column>
+        <Column id="_IDGenColumn3" >
+            <Label id="_IDGenText3" text="Order Date"></Label>
+        </Column>
+        <Column id="_IDGenColumn4" >
+            <Label id="_IDGenText4" text="Reqiured Date"></Label>
+        </Column>
+        <Column id="_IDGenColumn5" >
+            <Label id="_IDGenText5" text="Shiped Date"></Label>
+        </Column>
+        <Column id="_IDGenColumn6" >
+            <Label id="_IDGenText6" text="ShipVia"></Label>
+        </Column>
+        </columns>
+        <items>
+        </items>
+        <ColumnListItem id="_IDGenColumnListItem1" type="Active" press="onRowClick"  >
+        
+        <cells>
+            <Text id="_IDGenText9" text="{EmployeeDataModel>CustomerID}"/>
+            <Text id="_IDGenText10" text="{EmployeeDataModel>Orders/results/0/EmployeeID}"/>
+            <Text id="_IDGenText16" text="{EmployeeDataModel>Orders/results/0/OrderDate}"/>
+            <Text id="_IDGenText12" text="{EmployeeDataModel>Orders/results/0/RequiredDate}"/>
+            <Text id="_IDGenText13" text="{EmployeeDataModel>Orders/results/0/ShippedDate}"/>
+            <Label id="_IDGenText14" text="{EmployeeDataModel>Orders/results/0/ShipVia}"/>
+        </cells>
+        
+        </ColumnListItem> 
+        </Table> -->
+
+        </content>
+        </Page>
+</mvc:View> 

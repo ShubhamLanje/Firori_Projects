@@ -1,0 +1,44 @@
+<core:FragmentDefinition 
+    xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core" >
+    <Dialog id="_IDGenDialog1" title="Add Data">
+        <content>
+
+        	<f:SimpleForm id="SimpleFormChange354"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			labelSpanXL="3"
+			labelSpanL="3"
+			labelSpanM="3"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="4"
+			emptySpanM="4"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false" >
+			<f:content> 
+				
+				<Label id="_IDGenLabel2" text="Name" />
+				<Input id="name2"  />
+                <Label id="_IDGenLabel3" text="Email ID" />
+				<Input id="name3"  />
+				<Label id="_IDGenLabel32" text="Manager" />
+				<Input id="name1"  />
+                
+			</f:content>
+		</f:SimpleForm>
+
+        </content>
+		
+       <Button id="_IDGenButton2" text="Save" press="savedata"/> 
+       <Button id="_IDGenButton1" text="Close" press="handleCloseDialog"/> 
+	   
+        
+    </Dialog>
+</core:FragmentDefinition >

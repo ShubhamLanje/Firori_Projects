@@ -1,0 +1,48 @@
+<mvc:View 
+    controllerName="smarttable.controller.MainPage"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.f"
+	xmlns:m="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:sfb="sap.ui.comp.smartfilterbar"
+	xmlns:smartTable="sap.ui.comp.smarttable"
+	xmlns:sv="sap.ui.comp.smartvariants"
+    >
+    <DynamicPage id="dynamicPage" fitContent="true">
+		<header>
+			<DynamicPageHeader id="_IDGenDynamicPageHeader1">
+				<sfb:SmartFilterBar
+					id="smartFilterBar"
+					entitySet="Customers"
+					enableBasicSearch="true"
+					basicSearchFieldName="CustomerID"
+					persistencyKey="UniqueAndStablePersistencyKey">
+					<sfb:customData>
+						<core:CustomData key="defaultFilterBarExpanded" value='{"City": "true"}'/>
+						<core:CustomData key="defaultShowAllFilters" value='{"ContactTitle": "true"}'/>
+					</sfb:customData>     	
+				</sfb:SmartFilterBar>
+			</DynamicPageHeader>
+		</header>
+		<content>
+			<smartTable:SmartTable
+				id="smartTable"
+				entitySet="Customers"
+				smartFilterId="smartFilterBar"
+				tableType="Table"
+				enableAutoColumnWidth="true"
+				useTablePersonalisation="true"
+				header="Customer orders"
+				showRowCount="true">
+				<smartTable:layoutData>
+					<m:FlexItemData id="_IDGenFlexItemData1" growFactor="1" baseSize="0%"/>
+				</smartTable:layoutData>
+					<smartTable:customData>
+						<core:CustomData key="defaultShowAllFilters" value='{"City": "true"}'/>
+						<core:CustomData key="defaultFilterBarExpanded" value='{"City": "true"}'/>
+					</smartTable:customData>
+			</smartTable:SmartTable>
+		</content>
+	</DynamicPage>
+</mvc:View>

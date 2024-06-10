@@ -1,0 +1,43 @@
+<mvc:View controllerName="northwinddemo.controller.OrderDetails"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}" navButtonPress=".onNavtBack" showNavButton="true">
+    
+       <Table id="Secondpagejhg" items="{OrdersDModel>/}"  mode="MultiSelect" >
+    
+        <columns>
+        <Column id="_IDGenColumn1211" >
+            <Label id="_IDGenText1121" text="OrderID"></Label>
+        </Column>
+        <Column id="_IDGenColumn2121" >
+            <Label id="_IDGenText21212" text="ProductID"></Label>
+        </Column>
+        <Column id="_IDGenColumn3sdad" >
+            <Label id="_IDGenText3sdad" text="UnitPrice"></Label>
+        </Column>
+        <Column id="_IDGenColumn4sdad" >
+            <Label id="_IDGenText4sdad" text="Quantity"></Label>
+        </Column>
+        <Column id="_IDGenColumn5sdad" >
+            <Label id="_IDGenText5sdad" text="Discount"></Label>
+        </Column>
+       
+        </columns>
+        <items>
+        </items>
+        <ColumnListItem id="_IDGenColumnListItem1qas" type="Active" >
+        
+        <cells>
+           <Text id="_IDGenText15123" text="{OrdersDModel>OrderID}" />
+            <Text id="_IDGenText10123" text="{OrdersDModel>ProductID}"/>
+            <Text id="_IDGenText151123" text="{OrdersDModel>UnitPrice}" />
+            <Text id="_IDGenText102123" text="{OrdersDModel>Quantity}"/>
+            <Text id="_IDGenText153123" text="{OrdersDModel>Discount}" />
+            
+        </cells>
+        
+        </ColumnListItem> 
+        </Table>
+        <content />
+    </Page>
+</mvc:View>

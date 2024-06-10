@@ -1,0 +1,46 @@
+<mvc:View controllerName="gauravpro.controller.MainView"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}"> 
+         <content> 
+        <Table id="tablemain" items="{Empl>/}" mode="MultiSelect"   width="auto" >
+        <headerToolbar>
+			<OverflowToolbar id="otbSubheader">
+				<Title id="_IDGenTitle1" text="Products" level="H2"/>
+				<ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+				<Button id="saveButton" text="Dialog"  press="onRowClick"  />
+                
+			</OverflowToolbar>
+		</headerToolbar> 
+        <columns>
+        <Column id="_IDGenColumn0" ><Label id="_IDGenText0" text="ID"></Label></Column>
+        <Column id="_IDGenColumn13" ><Label id="_IDGenText12" text="created At"></Label></Column>
+        <Column id="_IDGenColumn01" ><Label id="_IDGenText01" text="created By"></Label></Column>
+        <Column id="_IDGenColumn11" ><Label id="_IDGenText11" text="modified At"></Label></Column>
+        <Column id="_IDGenColumn131" ><Label id="_IDGenText121" text="modifiedBy"></Label></Column>
+        <Column id="_IDGenColumn02" ><Label id="_IDGenText02" text="name"></Label></Column>
+        <Column id="_IDGenColumn12" ><Label id="_IDGenText122" text="email_id"></Label></Column>
+        <Column id="_IDGenColumn132" ><Label id="_IDGenText132" text="manager"></Label></Column>
+       <Column id="_IDGenColumn132456" ><Label id="_IDGenText1uy32" text="Delete"></Label></Column>
+        </columns>
+        <items>
+        <!-- <ColumnListItem id="_IDGenColumnListItem1" type="Active" press="sel" > -->
+        <ColumnListItem id="_IDGenColumnListItem1" type="Active" >
+        
+        <cells>
+             <Text id="_IDGenText15" text="{Emp>ID}" />
+             <Text id="_IDGenText911" text="{Emp>createdAt}"/>
+             <Text id="_IDGenText151" text="{Emp>createdBy}" />
+             <Text id="_IDGenText91" text="{Emp>modifiedAt}"/>
+             <Text id="_IDGenText912" text="{Emp>modifiedBy}"/>
+             <Text id="_IDGenText152" text="{Emp>name}" />
+             <Text id="_IDGenText93" text="{Emp>email_id}"/>
+             <Text id="_IDGenText931" text="{Emp>manager}"/>
+             <Button id="delete" text="delete" press="deleteData"></Button>   
+         </cells>
+        </ColumnListItem> 
+        </items>
+        </Table>
+       </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,46 @@
+<core:FragmentDefinition 
+    xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core" >
+    <Dialog id="_IDGenDialog1" title="Products Information">
+        <content>
+
+        	<f:SimpleForm id="SimpleFormChange354"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			labelSpanXL="3"
+			labelSpanL="3"
+			labelSpanM="3"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="4"
+			emptySpanM="4"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false" >
+			<f:content>
+				<Label id="_IDGenLabel1" text="CustomerID" />
+				<Text id="name1" text="{EmployeeDataModel>Orders/results/0/CustomerID}" />
+				<Label id="_IDGenLabel2" text="EmployeeID" />
+				<Text id="name2" text="{EmployeeDataModel>Orders/results/0/EmployeeID}" />
+                <Label id="_IDGenLabel3" text="OrderDate" />
+				<Text id="name3" text="{EmployeeDataModel>Orders/results/0/OrderDate}" />
+                <Label id="_IDGenLabel4" text="RequiredDate" />
+				<Text id="name4" text="{EmployeeDataModel>Orders/results/0/RequiredDate}" />
+                <Label id="_IDGenLabel5" text="ShippedDate" />
+				<Text id="name5" text="{EmployeeDataModel>Orders/results/0/ShippedDate}" />
+				<Label id="_IDGenLabel6" text="ShipVia" />
+				<Text id="name6" text="{EmployeeDataModel>Orders/results/0/ShipVia}" />
+			</f:content>
+		</f:SimpleForm>
+
+        </content>
+        <endButton>
+       <Button id="_IDGenButton1" text="close" press="handleCloseDialog"/> 
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition >

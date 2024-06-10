@@ -1,0 +1,149 @@
+{
+  "_version": "1.59.0",
+  "sap.app": {
+    "id": "northwinddemo",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.13.0",
+      "toolsId": "e91ee3b9-4376-4030-8603-0f64867b795f"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/v2/northwind/northwind.svc/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "localUri": "localService/metadata.xml",
+          "odataVersion": "2.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.122.2",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "northwinddemo.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {}
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "northwinddemo.view",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+          "name": "MainView",
+          "pattern": ":?query:",
+          "target": [
+            "MainView"
+          ]
+        },
+        {
+          "name": "OrdersView",
+          "pattern": "OrdersView/{customerId}",
+          "target": [
+            "OrdersView"
+          ]
+        },
+        {
+          "name": "OrderDetails",
+          "pattern": "OrderDetails/{OrderID}",
+          "target": [
+            "OrderDetails"
+          ]
+        }
+      ],
+      "targets": {
+        "MainView": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "MainView",
+          "viewName": "MainView"
+        },
+       "OrdersView": {
+        "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "OrdersView",
+          "viewName": "OrdersView"
+        },
+        "OrderDetails": {
+         "viewType": "XML",
+           "transition": "slide",
+           "clearControlAggregation": false,
+           "viewId": "OrderDetails",
+           "viewName": "OrderDetails"
+         }
+      }
+    },
+    "rootView": {
+      "viewName": "northwinddemo.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "App"
+    }
+  }
+}

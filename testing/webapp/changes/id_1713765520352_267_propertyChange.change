@@ -1,0 +1,41 @@
+{
+    "fileName": "id_1713765520352_267_propertyChange",
+    "fileType": "change",
+    "changeType": "propertyChange",
+    "moduleName": "",
+    "reference": "testing",
+    "packageName": "",
+    "content": {
+        "property": "displayShape",
+        "newValue": "Circle"
+    },
+    "selector": {
+        "id": "testing::sap.suite.ui.generic.template.ObjectPage.view.Details::Customers--objectImage",
+        "idIsLocal": false,
+        "type": "sap.f.Avatar"
+    },
+    "layer": "CUSTOMER_BASE",
+    "texts": {},
+    "namespace": "apps/testing/changes/",
+    "projectId": "",
+    "creation": 1713765520352,
+    "originalLanguage": "",
+    "support": {
+        "generator": "changeUtils: SAPFioriTools",
+        "service": "",
+        "user": "",
+        "sapui5Version": "1.123.1",
+        "sourceChangeFileName": "",
+        "compositeCommand": ""
+    },
+    "oDataInformation": {},
+    "dependentSelector": {},
+    "validAppVersions": {
+        "from": "0.0.1",
+        "to": "0.0.1",
+        "creation": "0.0.1"
+    },
+    "jsOnly": false,
+    "variantReference": "",
+    "appDescriptorChange": false
+}
